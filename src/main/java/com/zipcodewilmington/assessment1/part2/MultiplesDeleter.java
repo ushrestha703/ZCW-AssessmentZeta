@@ -13,20 +13,19 @@ public class MultiplesDeleter {
 
 
         Integer c = 0;
-        for(int i=0; i<ints.length; i++){
-            if(ints[i]%2!=0){
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] % 2 != 0){
                 c++;
             }
         }
         Integer [] a = new Integer[c];
         int k = 0;
-        for(int i=0; i<ints.length; i++){
-            if(ints[i]%2!=0){
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] % 2 != 0){
                 a[k] = ints[i];
                 k++;
             }
         }
-
         return a;
     }
 
@@ -38,24 +37,20 @@ public class MultiplesDeleter {
     public Integer[] deleteOdds(Integer[] ints) {
 
         Integer c = 0;
-        for(int i=0; i<ints.length; i++){
-            if(ints[i]%2==0){
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] % 2 == 0){
                 c++;
             }
         }
         Integer [] a = new Integer[c];
         int k = 0;
-        for(int i=0; i<ints.length; i++){
-            if(ints[i]%2==0){
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] % 2 == 0){
                 a[k] = ints[i];
                 k++;
             }
         }
-
         return a;
-
-
-
     }
 
     /**
@@ -64,8 +59,24 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+
+        Integer c = 0;
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] % 3 != 0){
+                c++;
+            }
+        }
+        Integer [] a = new Integer[c];
+        int k = 0;
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] % 3 != 0){
+                a[k] = ints[i];
+                k++;
+            }
+        }
+        return a;
     }
+
 
     /**
      * @param ints array of Integer objects
@@ -74,6 +85,23 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+
+        Integer c = 0;
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] % multiple != 0){
+                c++;
+            }
+        }
+        Integer [] a = new Integer[c];
+        int k = 0;
+        for(int i = 0; i < ints.length; i++){
+            if(ints[i] % multiple != 0){
+                a[k] = ints[i];
+                k++;
+            }
+        }
+        return a;
     }
+
+
 }
