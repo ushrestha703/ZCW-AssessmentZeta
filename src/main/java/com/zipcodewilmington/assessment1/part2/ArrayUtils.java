@@ -1,6 +1,9 @@
 package com.zipcodewilmington.assessment1.part2;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by leon on 2/16/18.
@@ -29,26 +32,29 @@ public class ArrayUtils {
      * @return an array with identical content excluding the specified `objectToRemove`
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
-    public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
+    public static Integer[] removeValue(Integer[] objectArray, Integer objectToRemove) {
 
-       /* if (objectArray == null) {
-            return null;
-        } else if (objectArray.length <= 0) {
-            return objectArray;
-        } else {
-            Integer[] output = new Integer[objectArray.length - 1];
-            Integer count = 0;
-            for (Object i : objectArray) {
-                if (!i.equals(objectToRemove)) {
-                    output[count++] = i;
-                }
+        Integer count = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            if (objectArray[i] == objectToRemove){
+                count++;
             }
-            return output;
+        }
+        int j = 0;
+        Integer[] newValue = new Integer[objectArray.length - count];
+
+        for ( int i = 0; i < objectArray.length; i++) {
+            if (objectArray[i] != objectToRemove) {
+                newValue[j++] = objectArray[i];
+            }
         }
 
-        */
-       return null;
+        return newValue;
     }
+
+
+
+
 
     /**
      * @param objectArray an array of any type of Object
@@ -75,7 +81,19 @@ public class ArrayUtils {
      * @return an array containing all elements in `objectArray` and `objectArrayToAdd`
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
-    public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+    public static Integer[] mergeArrays(Integer[] objectArray, Integer[] objectArrayToAdd) {
+
+        Integer[] combined = new Integer[objectArray.length + objectArrayToAdd.length];
+        int count = 0;
+
+        for (int i = 0; i < objectArray.length; i++) {
+            combined[i] = objectArray[i];
+            count++;
+        }
+        for (int j = 0; j < objectArrayToAdd .length; j++) {
+            combined[count++] = objectArrayToAdd[j];
+        }
+        return combined;
+
     }
 }
