@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -29,7 +31,23 @@ public class ArrayUtils {
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
 
-        return null;
+       /* if (objectArray == null) {
+            return null;
+        } else if (objectArray.length <= 0) {
+            return objectArray;
+        } else {
+            Integer[] output = new Integer[objectArray.length - 1];
+            Integer count = 0;
+            for (Object i : objectArray) {
+                if (!i.equals(objectToRemove)) {
+                    output[count++] = i;
+                }
+            }
+            return output;
+        }
+
+        */
+       return null;
     }
 
     /**
