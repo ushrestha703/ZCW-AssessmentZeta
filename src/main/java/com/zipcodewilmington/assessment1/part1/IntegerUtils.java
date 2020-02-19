@@ -39,13 +39,18 @@ public class IntegerUtils {
      * @return integer with identical digits in the reverse order
      */
     public static Integer reverseDigits(Integer val) {
-        int reverse = 0;
-        while (val != 0)
-        {
-            int digit = val % 10;
-            reverse = reverse * 10 + digit;
-            val /= 10;
-        }
-        return reverse;
+        //int reverse = 0;
+        //while (val != 0)
+       // {
+         //   int digit = val % 10;
+          //  reverse = reverse * 10 + digit;
+           // val /= 10;
+        //}
+        //return reverse;
+
+        String s = Integer.toString(val);
+        s = BasicStringUtils.reverse(s);
+        return new Integer(s);
+
     }
 }

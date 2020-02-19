@@ -9,8 +9,13 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        String cap = str.substring(0,1).toUpperCase() + str.substring(1);
-        return cap;
+      String firstCh = str.substring(0,1);
+      String rest = str.substring(1);
+      return firstCh.toUpperCase() + rest;
+
+
+       // String cap = str.substring(0,1).toUpperCase() + str.substring(1);
+       // return cap;
     }
 
     /**
@@ -18,9 +23,15 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        StringBuilder stringBuilder = new StringBuilder(str);
-        stringBuilder = stringBuilder.reverse();
-        return stringBuilder.toString();
+      //  StringBuilder stringBuilder = new StringBuilder(str);
+       // stringBuilder = stringBuilder.reverse();
+       // return stringBuilder.toString();
+
+       String newstr = "";
+        for (int i = str.length()-1; i >= 0; i-- ) {
+            newstr = newstr + str.charAt(i);
+        }
+        return newstr;
     }
 
     /**
@@ -29,11 +40,13 @@ public class BasicStringUtils {
      */
     public static String reverseThenCamelCase(String str) {
 
-        StringBuilder stringBuilder = new StringBuilder(str);
-        stringBuilder = stringBuilder.reverse();
-        String cap = stringBuilder.toString();
-        String cap1 = cap.substring(0,1).toUpperCase() + cap.substring(1);
-        return cap1;
+       // StringBuilder stringBuilder = new StringBuilder(str);
+       // stringBuilder = stringBuilder.reverse();
+       // String cap = stringBuilder.toString();
+       // String cap1 = cap.substring(0,1).toUpperCase() + cap.substring(1);
+       // return cap1;
+
+        return camelCase(reverse(str));
     }
 
 

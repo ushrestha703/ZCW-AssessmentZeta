@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import com.zipcodewilmington.assessment1.part1.BasicStringUtils;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -35,7 +37,7 @@ public class StringUtils {
      */
     public static String reverseFirstWord(String sentence) {
 
-        String[] words = sentence.split(" ");
+       /* String[] words = sentence.split(" ");
 
         String word = words[0];
 
@@ -44,6 +46,10 @@ public class StringUtils {
             reverseWord += word.charAt(i);
         }
         return reverseWord;
+
+        */
+
+       return BasicStringUtils.reverse(getFirstWord(sentence));
     }
 
     /**
@@ -52,6 +58,7 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
+        /*
         String[] words = sentence.split(" ");
 
         String word = words[0];
@@ -63,6 +70,9 @@ public class StringUtils {
 
         String cap = reverseWord.substring(0,1).toUpperCase() + reverseWord.substring(1);
         return cap;
+
+         */
+        return BasicStringUtils.camelCase(reverseFirstWord(sentence));
     }
 
 

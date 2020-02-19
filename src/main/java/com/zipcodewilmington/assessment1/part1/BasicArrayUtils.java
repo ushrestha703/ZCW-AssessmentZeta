@@ -9,8 +9,11 @@ public class BasicArrayUtils {
      * @return the first element in the array
      */
     public static String getFirstElement(String[] stringArray) {
-        String firstElement = stringArray[0];
-        return firstElement;
+        if (stringArray.length == 0) {
+            return null;
+        }
+        else
+        return stringArray[0];
     }
 
     /**
@@ -18,8 +21,14 @@ public class BasicArrayUtils {
      * @return the second element in the array
      */
     public static String getSecondElement(String[] stringArray) {
-        String secondElement = stringArray[1];
-        return secondElement;
+        if (stringArray.length < 2) {
+            return null;
+        }
+        else
+            return stringArray[1];
+
+        //String secondElement = stringArray[1];
+        //return secondElement;
     }
 
     /**
@@ -27,8 +36,16 @@ public class BasicArrayUtils {
      * @return the last element in the array
      */
     public static String getLastElement(String[] stringArray) {
-        String lastElement = stringArray[stringArray.length - 1];
-        return lastElement;
+
+        if (stringArray.length == 0) {
+            return null;
+        }
+        else
+            return stringArray[stringArray.length -1];
+
+
+        // String lastElement = stringArray[stringArray.length - 1];
+        //return lastElement;
     }
 
     /**
@@ -36,7 +53,14 @@ public class BasicArrayUtils {
      * @return the second to last element in the array
      */
     public static String getSecondToLastElement(String[] stringArray) {
-        String secondToLastElement = stringArray[stringArray.length - 2];
-        return secondToLastElement;
+        if (stringArray.length < 2) {
+            return null;
+        }
+        else
+            return stringArray[stringArray.length - 2];
+
+
+        //String secondToLastElement = stringArray[stringArray.length - 2];
+        //return secondToLastElement;
     }
 }
